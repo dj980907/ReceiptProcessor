@@ -1,10 +1,12 @@
 // for this assessment, I am going to use express
-const express = require('express');
-// import express from 'express';
+import express from 'express';
+
 // also a body-parser
-const bodyParser = require('body-parser');
+import bodyParser from 'body-parser';
+
 // and uuid
-const uuid = require('uuid');
+// const uuid = require('uuid');
+import { v4 as uuidv4 } from 'uuid';
 
 // create an app using express
 const app = express();
@@ -18,7 +20,7 @@ const port = 3000;
 app.use(bodyParser.json());
 
 const receiptDatabase = {};
-const idGenerator = () => uuid.v4();
+const idGenerator = () => uuidv4();
 
 app.post('/receipts/process', (req, res) => {
   const receiptId = idGenerator();

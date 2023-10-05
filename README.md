@@ -9,7 +9,17 @@ You should be able to open up your terminal or DOS Shell and run `node -v` and `
 
 If they are not installed, <a href="https://nodejs.org/en/download/package-manager" target="">here</a> is the link to install `Node.js` with Package Manager.<br>
 
-Now, you should be able to run `node -v` and `npm -v` after installing `Node.js`.
+Now, you should be able to run `node -v` and `npm -v` after installing `Node.js`.<br>
+
+Next, you should install `express`. To do this, write this in your terminal:
+```
+npm install express
+```
+
+Finally, you should install `uuid`. To do this, write this in your terminal:
+```
+npm install uuid
+```
 
 ## Step 2. Clone The Repository
 On the repository's page, use the green "Clone or download" button on the right side of the screen to copy the HTTPS clone URL to clone this project. <br>
@@ -17,3 +27,5 @@ To use the commandline client (with GITHUB_REPOSITORY_URL being the url you copi
 ```
  git clone GITHUB_REPOSITORY_URL
 ```
+
+## Step 3. Run The Code!
