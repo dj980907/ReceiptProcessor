@@ -4,7 +4,11 @@ My name is Dongjoo Lee. I am a senior studying Computer Science and Economics at
 Please follow the step by step guideline to run this API.
 
 ## Preparation
-Ensure that `node` and `npm` are installed (this should have been done for homework #0). You should be able to open up your terminal or DOS Shell and run node -v and npm -v. Both commands should output a version number
+Ensure that `node` and `npm` are installed. <br>
+You should be able to open up your terminal or DOS Shell and run `node -v` and `npm -v`. Both commands should output a version number. <br>
+
+If they are not installed, <a href="https://nodejs.org/en/download/package-manager" target="">here</a> is the link to install `Node.js` with Package Manager.
+
 Make sure you have the following:<br>
 ```
 node
