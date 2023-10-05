@@ -3,14 +3,17 @@
 My name is Dongjoo Lee. I am a senior studying Computer Science and Economics at NYU. <br>
 Please follow the step by step guideline to run this API.
 
-## Preparation
+## Step 1. Preparation
 Ensure that `node` and `npm` are installed. <br>
 You should be able to open up your terminal or DOS Shell and run `node -v` and `npm -v`. Both commands should output a version number. <br>
 
-If they are not installed, <a href="https://nodejs.org/en/download/package-manager" target="">here</a> is the link to install `Node.js` with Package Manager.
+If they are not installed, <a href="https://nodejs.org/en/download/package-manager" target="">here</a> is the link to install `Node.js` with Package Manager.<br>
 
-Make sure you have the following:<br>
+Now, you should be able to run `node -v` and `npm -v` after installing `Node.js`.
+
+## Step 2. Clone The Repository
+On the repository's page, use the green "Clone or download" button on the right side of the screen to copy the HTTPS clone URL to clone this project. <br>
+To use the commandline client (with GITHUB_REPOSITORY_URL being the url you copied from the green button):
 ```
-node
-npm
+ git clone GITHUB_REPOSITORY_URL
 ```
