@@ -38,3 +38,47 @@ Then, you will see a message in your cconsole (terminal):
 Server is running on port 3000
 ```
 Now you can test `POST` and `GET` requests. 
+
+## Sample Outputs
+
+# Example 1
+```
+{
+  "retailer": "Target",
+  "purchaseDate": "2022-01-01",
+  "purchaseTime": "13:01",
+  "items": [
+    {
+      "shortDescription": "Mountain Dew 12PK",
+      "price": "6.49"
+    },{
+      "shortDescription": "Emils Cheese Pizza",
+      "price": "12.25"
+    },{
+      "shortDescription": "Knorr Creamy Chicken",
+      "price": "1.26"
+    },{
+      "shortDescription": "Doritos Nacho Cheese",
+      "price": "3.35"
+    },{
+      "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ",
+      "price": "12.00"
+    }
+  ],
+  "total": "35.35"
+}
+```
+# Example 1 Output
+```
+hi
+```
+
+## Summary of API Specification
+# Endpoint: Process Receipts
+
+<ul>
+    <li> Path: `/receipts/process``
+    <li> Method: `POST``
+    <li> Payload: Receipt JSON
+    <li> Response: JSON containing an id for the receipt.
+</ul>
