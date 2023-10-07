@@ -77,8 +77,8 @@ hi
 ### Endpoint: Process Receipts
 
 <ul>
-    <li> Path: ``/receipts/process```
-    <li> Method: `POST`
+    <li> Path: <code>/receipts/process</code>
+    <li> Method: <code>POST</code>
     <li> Payload: Receipt JSON
     <li> Response: JSON containing an id for the receipt.
 </ul>
@@ -93,8 +93,8 @@ The ID returned is the ID that should be passed into /receipts/{id}/points to ge
 ### Endpoint: Get Points
 
 <ul>
-    <li> Path: `/receipts/{id}/points`
-    <li> Method: `GET`
+    <li> Path: <code>/receipts/{id}/points</code>
+    <li> Method: <code>GET</code>
     <li> Response: A JSON object containing the number of points awarded.
 </ul>
 
