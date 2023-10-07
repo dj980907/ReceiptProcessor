@@ -1,8 +1,5 @@
 # Receipt Processor Challenge Documentation
 
-My name is Dongjoo Lee. I am a senior studying Computer Science and Economics at NYU. <br>
-Please follow the step by step guideline to run this API.
-
 ## Summary of API Specification
 ### Endpoint: Process Receipts
 
@@ -19,6 +16,48 @@ Takes in a JSON receipt (see example in the example directory) and returns a JSO
 
 The ID returned is the ID that should be passed into /receipts/{id}/points to get the number of points the receipt was awarded.
 
+For example, if you want to test `POST` request, copy and paste the following JSON and put it in the request body.
+```
+{
+  "retailer": "Target",
+  "purchaseDate": "2022-01-01",
+  "purchaseTime": "13:01",
+  "items": [
+    {
+      "shortDescription": "Mountain Dew 12PK",
+      "price": "6.49"
+    },{
+      "shortDescription": "Emils Cheese Pizza",
+      "price": "12.25"
+    },{
+      "shortDescription": "Knorr Creamy Chicken",
+      "price": "1.26"
+    },{
+      "shortDescription": "Doritos Nacho Cheese",
+      "price": "3.35"
+    },{
+      "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ",
+      "price": "12.00"
+    }
+  ],
+  "total": "35.35"
+}
+```
+Then, you should get the response of:
+```
+{ "points": 28 }
+```
+
+`points` will be calculated based on the following set of rules:
+<ul>
+    <li>One point for every alphanumeric character in the retailer name.
+    <li>50 points if the total is a round dollar amount with no cents.
+    <li>25 points if the total is a multiple of 0.25.
+    <li>5 points for every two items on the receipt.
+    <li>If the trimmed length of the item description is a multiple of 3, multiply the price by 0.2 and round up to the nearest integer. The result is the number of points earned.
+    <li>6 points if the day in the purchase date is odd.
+    <li>10 points if the time of purchase is after 2:00pm and before 4:00pm.
+</ul>
 
 ### Endpoint: Get Points
 
@@ -31,6 +70,16 @@ The ID returned is the ID that should be passed into /receipts/{id}/points to ge
 Description:
 
 A simple Getter endpoint that looks up the receipt by the ID and returns an object specifying the points awarded.
+
+For example, if you want to test `GET` request of the previous `POST` request, the path for the request will be:
+```
+http://localhost/3000/receipts/7fb1377b-b223-49d9-a31a-5a02701dd310/points
+``` 
+
+Then, you should get the response of:
+```
+{ "points": "7fb1377b-b223-49d9-a31a-5a02701dd310" }
+```
 
 ## Step 1. Preparation
 Ensure that `node` and `npm` are installed. <br>
@@ -71,33 +120,9 @@ Now you can test `POST` and `GET` requests.
 ## Sample Outputs
 
 ### Example 1
-```
-{
-  "retailer": "Target",
-  "purchaseDate": "2022-01-01",
-  "purchaseTime": "13:01",
-  "items": [
-    {
-      "shortDescription": "Mountain Dew 12PK",
-      "price": "6.49"
-    },{
-      "shortDescription": "Emils Cheese Pizza",
-      "price": "12.25"
-    },{
-      "shortDescription": "Knorr Creamy Chicken",
-      "price": "1.26"
-    },{
-      "shortDescription": "Doritos Nacho Cheese",
-      "price": "3.35"
-    },{
-      "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ",
-      "price": "12.00"
-    }
-  ],
-  "total": "35.35"
-}
-```
+
+
 ### Example 1 Output
 ```
-hi
+
 ```
