@@ -77,7 +77,7 @@ hi
 ### Endpoint: Process Receipts
 
 <ul>
-    <li> Path: `/receipts/process`
+    <li> Path: ``/receipts/process```
     <li> Method: `POST`
     <li> Payload: Receipt JSON
     <li> Response: JSON containing an id for the receipt.
