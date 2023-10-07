@@ -116,13 +116,3 @@ Then, you will see a message in your cconsole (terminal):
 Server is running on port 3000
 ```
 Now you can test `POST` and `GET` requests. 
-
-## Sample Outputs
-
-### Example 1
-
-
-### Example 1 Output
-```
-
-```
