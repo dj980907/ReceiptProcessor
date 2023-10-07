@@ -93,8 +93,8 @@ The ID returned is the ID that should be passed into /receipts/{id}/points to ge
 ### Endpoint: Get Points
 
 <ul>
-    <li> Path: `/receipts/{id}/points`
-    <li> Method: `GET`
+    <li> Path: `/receipts/{id}/points``Hi`
+    <li> Method: `GET``GET`
     <li> Response: A JSON object containing the number of points awarded.
 </ul>
 
