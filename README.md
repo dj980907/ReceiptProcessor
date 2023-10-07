@@ -1,4 +1,4 @@
-# Receipt Processor Challenge Documentation
+# Receipt Processor Documentation
 
 ## Summary of API Specification
 ### Endpoint: Process Receipts
