@@ -45,19 +45,8 @@ For example, if you want to test `POST` request, copy and paste the following JS
 ```
 Then, you should get the response of:
 ```
-{ "points": 28 }
+{ "id": "7fb1377b-b223-49d9-a31a-5a02701dd310" }
 ```
-
-`points` will be calculated based on the following set of rules:
-<ul>
-    <li>One point for every alphanumeric character in the retailer name.
-    <li>50 points if the total is a round dollar amount with no cents.
-    <li>25 points if the total is a multiple of 0.25.
-    <li>5 points for every two items on the receipt.
-    <li>If the trimmed length of the item description is a multiple of 3, multiply the price by 0.2 and round up to the nearest integer. The result is the number of points earned.
-    <li>6 points if the day in the purchase date is odd.
-    <li>10 points if the time of purchase is after 2:00pm and before 4:00pm.
-</ul>
 
 ### Endpoint: Get Points
 
@@ -78,8 +67,19 @@ http://localhost/3000/receipts/7fb1377b-b223-49d9-a31a-5a02701dd310/points
 
 Then, you should get the response of:
 ```
-{ "points": "7fb1377b-b223-49d9-a31a-5a02701dd310" }
+{ "points": 28 }
 ```
+
+`points` will be calculated based on the following set of rules:
+<ul>
+    <li>One point for every alphanumeric character in the retailer name.
+    <li>50 points if the total is a round dollar amount with no cents.
+    <li>25 points if the total is a multiple of 0.25.
+    <li>5 points for every two items on the receipt.
+    <li>If the trimmed length of the item description is a multiple of 3, multiply the price by 0.2 and round up to the nearest integer. The result is the number of points earned.
+    <li>6 points if the day in the purchase date is odd.
+    <li>10 points if the time of purchase is after 2:00pm and before 4:00pm.
+</ul>
 
 ## Step 1. Preparation
 Ensure that `node` and `npm` are installed. <br>
