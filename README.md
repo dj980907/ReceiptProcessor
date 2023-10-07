@@ -48,6 +48,8 @@ Then, you should get the response of:
 { "id": "7fb1377b-b223-49d9-a31a-5a02701dd310" }
 ```
 
+Note that `id` will be different every time you make `POST` request since it is a unique id generated for every receipt.
+
 ### Endpoint: Get Points
 
 <ul>
