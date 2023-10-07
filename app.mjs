@@ -81,9 +81,9 @@ function calculatePoints(receipt) {
     for (const item of receipt.items) {
         const descriptionLength = item.shortDescription.trim().length;
         if (descriptionLength % 3 === 0) {
-        const itemPrice = parseFloat(item.price);
-        const itemPoints = Math.ceil(itemPrice * 0.2);
-        points += itemPoints;
+            const itemPrice = parseFloat(item.price);
+            const itemPoints = Math.ceil(itemPrice * 0.2);
+            points += itemPoints;
         }
     }
 
@@ -97,7 +97,6 @@ function calculatePoints(receipt) {
     // 10 points are added to the total points if the time of purchase is after 2:00pm and before 4:00pm.
     const purchaseTime = receipt.purchaseTime.split(':');
     const hour = parseInt(purchaseTime[0]);
-
     if (hour >= 14 && hour < 16) {
         points += 10;
     }
