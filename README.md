@@ -41,7 +41,7 @@ Now you can test `POST` and `GET` requests.
 
 ## Sample Outputs
 
-# Example 1
+### Example 1
 ```
 {
   "retailer": "Target",
@@ -68,13 +68,13 @@ Now you can test `POST` and `GET` requests.
   "total": "35.35"
 }
 ```
-# Example 1 Output
+### Example 1 Output
 ```
 hi
 ```
 
 ## Summary of API Specification
-# Endpoint: Process Receipts
+### Endpoint: Process Receipts
 
 <ul>
     <li> Path: `/receipts/process``
