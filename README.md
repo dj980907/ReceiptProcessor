@@ -29,3 +29,12 @@ To use the commandline client (with GITHUB_REPOSITORY_URL being the url you copi
 ```
 
 ## Step 3. Run The Code!
+To run the API, simply type this in the console (terminal):
+```
+node app.mjs
+```
+Then, you will see a message in your cconsole (terminal):
+```
+Server is running on port 3000
+```
+Now you can test `POST` and `GET` requests. 
