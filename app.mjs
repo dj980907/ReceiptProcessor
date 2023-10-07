@@ -57,26 +57,27 @@ function calculatePoints(receipt) {
     // declare the points to be 0 to start with
     let points = 0;
 
-    // Rule 1: One point for every alphanumeric character in the retailer name.
+    // One point for every alphanumeric character in the retailer name is added to the total points
     points += receipt.retailer.replace(/[^a-zA-Z0-9]/g, '').length;
 
-    // Rule 2: 50 points if the total is a round dollar amount with no cents.
+    // 50 points are added to the total points if the total is a round dollar amount with no cents.
     const totalAmount = parseFloat(receipt.total);
     if (totalAmount === Math.floor(totalAmount)) {
         points += 50;
     }
 
-    // Rule 3: 25 points if the total is a multiple of 0.25.
+    // 25 points are added to total points if the total is a multiple of 0.25.
     if (totalAmount % 0.25 === 0) {
         points += 25;
     }
 
-    // Rule 4: 5 points for every two items on the receipt.
+    // 5 points for every two items on the receipt are added to the total points
     const numItems = receipt.items.length;
     points += Math.floor(numItems / 2) * 5;
 
-    // Rule 5: If the trimmed length of the item description is a multiple of 3,
-    // multiply the price by 0.2 and round up to the nearest integer. The result is the number of points earned.
+    // If the trimmed length of the item description is a multiple of 3,
+    // multiply the price by 0.2 and round up to the nearest integer.
+    // The result is the number of points earned.
     for (const item of receipt.items) {
         const descriptionLength = item.shortDescription.trim().length;
         if (descriptionLength % 3 === 0) {
@@ -86,15 +87,17 @@ function calculatePoints(receipt) {
         }
     }
 
-    // Rule 6: 6 points if the day in the purchase date is odd.
-    const purchaseDate = new Date(receipt.purchaseDate);
-    if (purchaseDate.getDate() % 2 !== 0) {
+    // 6 points are added to the total points if the day in the purchase date is odd.
+    const split = receipt.purchaseDate.split("-");
+
+    if (split[2] % 2 !== 0) {
         points += 6;
     }
 
-    // Rule 7: 10 points if the time of purchase is after 2:00pm and before 4:00pm.
+    // 10 points are added to the total points if the time of purchase is after 2:00pm and before 4:00pm.
     const purchaseTime = receipt.purchaseTime.split(':');
     const hour = parseInt(purchaseTime[0]);
+
     if (hour >= 14 && hour < 16) {
         points += 10;
     }
