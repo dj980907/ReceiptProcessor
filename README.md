@@ -91,6 +91,7 @@ In order to run this API, you need to install the following:
 </ul>
 
 Ensure that `node` and `npm` are installed. <br>
+
 You should be able to open up your terminal or DOS Shell and run `node -v` and `npm -v`. Both commands should output a version number. <br>
 
 If you don't see version number, then it means that you do not have node in your device.<br>
