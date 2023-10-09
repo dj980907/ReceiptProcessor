@@ -134,4 +134,53 @@ Server is running on port 3000
 Now you can test `POST` and `GET` requests. 
 
 
+## Testing
+I used Kong Insomnia to test the functionality of the API. Kong Insomnia is a collaborative open source API development platform<br>
+
+### Testing Post Request
+If I want to make a `POST` request, then I type in:
+```
+http://localhost:3000/receipts/process
+```
+and put the JSON of receipt such as:
+```
+{
+  "retailer": "Target",
+  "purchaseDate": "2022-01-01",
+  "purchaseTime": "13:01",
+  "items": [
+    {
+      "shortDescription": "Mountain Dew 12PK",
+      "price": "6.49"
+    },{
+      "shortDescription": "Emils Cheese Pizza",
+      "price": "12.25"
+    },{
+      "shortDescription": "Knorr Creamy Chicken",
+      "price": "1.26"
+    },{
+      "shortDescription": "Doritos Nacho Cheese",
+      "price": "3.35"
+    },{
+      "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ",
+      "price": "12.00"
+    }
+  ],
+  "total": "35.35"
+}
+```
+
+Then, click the send button, I will get the id of the receipt.<br>
+
+Here is the screenshot of the Kong Insomnia.<br>
+
+### Testing Get Request
+If I want to make a `Get` request, then I type in:
+```
+http://localhost:3000/receipts/eee33198-ff5f-48ae-937c-07d8b32431b3/points
+```
+
+Then, the points calculated by the code will be returned.<br>
+
+Here is the screenshot of the Kong Insomnia.<br>
 
