@@ -174,6 +174,8 @@ Then, click the send button, I will get the id of the receipt.<br>
 
 Here is the screenshot of the Kong Insomnia.<br>
 
+<img width="979" alt="Screen Shot 2023-10-09 at 4 38 12 PM" src="https://github.com/dj980907/ReceiptProcessor/assets/108609222/56795e8f-9754-491e-80dc-6dbcf341f135">
+
 ### Testing Get Request
 If I want to make a `Get` request, then I type in:
 ```
@@ -183,4 +185,5 @@ http://localhost:3000/receipts/eee33198-ff5f-48ae-937c-07d8b32431b3/points
 Then, the points calculated by the code will be returned.<br>
 
 Here is the screenshot of the Kong Insomnia.<br>
+<img width="979" alt="Screen Shot 2023-10-09 at 4 40 33 PM" src="https://github.com/dj980907/ReceiptProcessor/assets/108609222/5f2bfcd5-61ea-4733-bc1e-17724e5d2aa1">
 
